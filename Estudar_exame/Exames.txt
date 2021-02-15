@@ -1,0 +1,17 @@
+Exame 2009 -> Feito
+Exame 2009 Recurso -> Feito
+Exame 2013 -> verificar  2
+Exame 2014 -> Feito
+Exame 2015 -> Feito
+Exame 2016 -> Não sei: 4
+Exame 2017 -> Feito
+Exame 2018 -> Feito
+Exame 2019 -> Feito
+
+
+Não esquecer:
+Erro absoluto bisecção: abs(raiz que deu - ultimo a)
+Erro relativo-bisecção: erro_abs / abs(ultimo a)
+
+
+Erro relativo estimado = (S''-S')/(2^ordem - 1 * S'')

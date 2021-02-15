@@ -1,0 +1,3 @@
+C:/Users/user/Desktop/FEUP/2_Ano/1_Semestre/MNUM/TP5/GAUSS_JACOBI/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/user/Desktop/FEUP/2_Ano/1_Semestre/MNUM/TP5/GAUSS_JACOBI/cmake-build-debug/CMakeFiles/GAUSS_JACOBI.dir
+C:/Users/user/Desktop/FEUP/2_Ano/1_Semestre/MNUM/TP5/GAUSS_JACOBI/cmake-build-debug/CMakeFiles/edit_cache.dir

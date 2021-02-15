@@ -1,0 +1,59 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "GAUSS_JACOBI",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "GAUSS_JACOBI::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GAUSS_JACOBI-Debug-91f19a4c38a82433ee97.json",
+					"name" : "GAUSS_JACOBI",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/user/Desktop/FEUP/2_Ano/1_Semestre/MNUM/TP5/GAUSS_JACOBI/out/build/x64-Debug (default)",
+		"source" : "C:/Users/user/Desktop/FEUP/2_Ano/1_Semestre/MNUM/TP5/GAUSS_JACOBI"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

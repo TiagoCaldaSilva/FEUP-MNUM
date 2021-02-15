@@ -1,0 +1,46 @@
+1.
+euler:
+	2.00 2.0
+	2.25 2.5 
+	2.50 3.0 
+rk4:
+	2.00 2.0 0.50 0.50 0.50 0.50
+	2.25 2.5
+	2.50 3.0
+
+2.
+	 Ao contrário dos métodos analíticos, que tentam ir directamente ao valor desejado, os métodos numéricos, iterativos,
+baseiam-se no princípio de dar sucessivos passos descendentes até encontrar o ponto mais baixo possível, como é exemplo o método do gradiente.
+	Sabendo que se seguirmos a direcção do gradiente local em sentido inverso seremos, então, conduzidos ao mínimo local, e dado que todos 
+os caminhos de maior pendor levam ao mesmo ponto, nem sequer precisamos de ser muito exactos: acabaremos sempre por lá chegar, pelo menos aproximadamente.
+E é nisto que se baseia o método do gradiente. 
+	 A técnica mais primária de aplicação da ideia do método do gradiente consiste em dar passos (usando o expoente(i) para indicar a sua ordem): 
+		xj^(i+1) = xj^(i) - h * f'/ dxj, (j = 1, 2, 3,..., n) em que h é o passo.
+	Assim, o primeiro problema é, naturalmente, o de arbitrar um valor razoável para h, tendo em mente que não há necessidade de ser muito exacto, 
+visto que todos os caminhos vão dar ao mínimo. Um modo simples de o resolver consiste em começar com um passo qualquer (por exemplo, com h = 1) e:
+	1. se f(x^(i+1)) < f(x^(i)), efectivar o passo e usar para o passo seguinte h = 2 * h;
+  	2. se f(x^(i+1)) > f(x(i)), não efectivar o passo e fazer nova tentativa com h = h / 2;
+	
+	Desta forma, podemos optimizar o valor do passo a cada iteração, aproximando-nos cada vez mais do mínimo sempre que os valores forem decrescentes.
+
+3. 36.40507
+
+4.-------------------
+
+5. 
+	1.50000 0.80000
+	2.48421 3.20263
+	2.09564 2.24073
+
+6. opção 6)
+
+7. 
+	0.125		31.66425
+	0.0625		31.66405
+	0.03125		31.66403
+
+qc = 15.94745
+erro relativo estimado = -2.67926e-08
+valor analitico = 31.66403
+erro relativo =  - 6.83782e-6
+ordens de grandeza = 2

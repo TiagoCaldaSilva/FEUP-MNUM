@@ -1,0 +1,47 @@
+1.
+	Quanto à primeira hipótese, como estamos perante uma sucessão de números inteiros, temos
+a vantagem de não termos de lidar com erros de arredondamentos, pois os números não possuem casas decimais.
+Por outro lado, e por serem inteiros, iriamos precisar de uma ordem de grandeza bastante elevada a nível do passo
+de integração para podermos obter um resultado com bastante precisão.
+	Neste caso, e por serem floats, já não iriamos precisar de uma elevada ordem de grandeza a nível do passo de inte-
+gração para obtermos um resultado com alguma precisão. Por outro lado, e ao contrário do exemplo anterior, já iriamos ter
+problemas com os erros de arredondamentos pois os valores já possuem casas decimais.
+	Tal como no exemplo anterior, neste caso não teriamos o problema da ordem de grandeza do passo de integração, pois 
+como estamos a trabalhar com floats conseguimos obter um resultado com bastante precisão com uma ordem de grandeza menor.
+Porém, iremos ter de lidar com erros de arredondamentos, pois tal como no exemplo anterior, estamos a lidar com valores com casas
+decimais e o facto de a cada iteração multiplicarmos o valo por um número inteiro só intensifica os erros de iteração para iteração.
+	O último caso, é o melhor caso pois permite-nos ter um passo com uma pequena ordem de grandeza e preciso, e por outro lado, sem erros
+de arredondamentos associados pois o passo é sempre representável na linguagem da máquina.
+2.
+	1.00000 1.00000
+	2.13333 2.06667
+	1.74580 1.69764
+3.-----
+	
+4.a)
+	0.00000 0.80000 0.65604 -0.50000 0.10972 -0.11967
+	0.65604 0.80000 0.73115
+	0.73115 0.80000 0.74296
+	0.74296 0.80000 0.74476
+4.b) ?????????????????
+5.
+	Euler
+	0.00 0.00000
+	0.25 0.25000
+	0.50 0.53125
+	RK4:
+	0.00 0.00000
+	0.25 0.26874
+	0.50 0.59220
+6.
+	trap
+	h = 0.5 | h' = 0.25 | h'' = 0.125
+	I = 20.18313 | I' = 19.51436 | I'' = 19.34573
+	qc = 3.96578 | erro absoluto estimado = -0.05621
+
+	simpsons
+	h = 0.5 | h' = 0.25 | h'' = 0.125
+	I = 19.32073 | I' = 19.29144 | I'' = 19.28952
+	qc = 15.22515 | erro absoluto estimado = -0.00013
+
+

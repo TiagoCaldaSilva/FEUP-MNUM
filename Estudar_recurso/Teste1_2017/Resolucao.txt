@@ -1,0 +1,28 @@
+1. 3.76331
+2. Começando por iniciar a equação que queremos resolver, temos as seguintes possibilidades:
+	. m é par:
+		. R é positivo -> equação com duas soluções possíveis (um positiva e outra negativa)
+		. R é nulo -> equação com apenas uma solução (x = 0)
+		. R é negativo -> equação com 0 soluções (impossível)
+	. m é ímpar:
+		. R é positivo -> solução com apenas uma solução (positiva)
+		. R é nulo -> solução com apenas uma solução (x = 0)
+		. R é negativo -> solução com apenas uma solução (negativa)
+
+Assim, como no método de Newton (método não intervalar) teremos de escolher um guess inicial para começar a 
+iterar sobre o mesmo até chegar ao resultado, temos que se este não for bem escolhido o método pode divergir.
+E dada esta equação temos:
+	. Se m é par/ímpar e R é nulo -> se o valor do guess inicial for mal escolhido o sistema pode divergir 
+por completo 
+	. Se m é ímpar e R é positivo/negativo -> se o valor do guess inicial for mal escolhido (demasiado distante 
+da raiz do sistema), este pode divergir por completo.
+	. Se m é par e R é positivo -> Se o valor do guess inicial for mal escolhido o sistema pode divergir para a 
+outra raiz (que não é a procurada) ou se for muito distante das duas, pode diverdir por completo.
+Assim, como temos de ter cuidado com a nossa equação e o guess inicial escolhido, a fórmula recorrente escolhida deve ser aquela
+que é mais compacta e com menos probabilidades de divergir, e, deste modo, a melhor opção seria a fórmula a), pois é um polinómio
+(contínua, enquanto que a fórmula b) não é contínua em todos os pontos) e mais compacta que a opção b).
+5. É possível obter dois resultados diferentes dependendo pela ordem que se fazem os cálculos, ou seja:
+	- Como a mákina é uma máquina que apenas trabalha com 3 casas décimais, irá ter de arredondar sempre os valores para ficar
+apenas com as 3 casas décimais e a ordem com que se efetuam os cálculos irá sempre influenciar o resultado dos mesmos.
+Assim, o mais correto destes valores irá ser aquele que segue a ordem da expressão, ou seja, aquele que efetua inicialmente 5 * x^3 e seguindo
+a expressão para a direita efetuando posteriormente o resultado anterior - 3*x^2 e assim sucessivamente.

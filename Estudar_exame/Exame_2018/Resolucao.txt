@@ -1,0 +1,46 @@
+2.a) I
+2.b) III
+2.c) 
+xn+1 = (1.2 - 61yn - 41zn) / 103
+yn+1 = (0 - 1*(xn+1) - 3*zn) / 5.5
+zn+1 = (-13 - 2*(xn+1) - 10*(yn+1)) / 13
+
+3. 1/9 * ((1.1+7.8+1.2+9.8) + 4*(2.1+1.5+2.2+1.4) + 16*4) = 12.52222222222222
+
+4.a) y' = z
+4.b) z' = A*z - By
+4.c) h = 0.2
+
+5.
+	Como estamos perante um problema que se passa por minimizar uma função unidimensional, temos a possibilidade de utilizar um
+dos três seguintes métodos: Método dos terços, método da regra áurea e método da interpolação quadrática.
+	O método dos terços caracteriza-se por fazer a divisão do intervalo enquadrante em três subintervalos iguais, de amplitude elementar
+é um perfeitamente válido mas pode exigir demasiados cálculos da função f(x). A aplicação deste método intervalar exige a definição de qual
+regra de escolha dos pontos x3 e x4 (novos pontos calculados pelo métodos que pertencem ao intervalo [x1, x2] (intervalo que possui o mínimoo
+da função)), dentro do intervalo [x1, x2]. Uma ideia simples consiste em dividir o intervalo em terços,(método dos terços), mas é imediato 
+ver que, se mantivermos a regra, quando tivermos abandonado um dos subintervalos,nenhum dos cálculos feitos será aproveitado para o 
+interior do novo intervalo.
+	Deste modo, temos a possibilidade de utilizar a regra áurea que reutiliza o valor calculado anteriormente, iniciando a busca no
+intervalo [x1, x2] e ir diminuindo este intervalo, em cada iteração, a [x3, x2] ou [x1, x4] dependendo em qual destes intervalos se encontra
+o mínimo (x3 = x1 + A(x2-x1) e x4 = x1 + B(x2-x1)).
+	Uma outra técnica que se usa com frequência, dita da interpolação quadrática, consiste em, uma vezisolado um extremo, substituir a 
+curva por uma parábola para obter uma nova estima do extremo e retomar o processo de busca, agora com um passo mais pequeno.
+Dado que, em muitos casos, a maior parte do tempo de cálculo é dedicado ao cálculo dos valores da função, aconselha-se a iniciar a busca 
+descendente com passos sucessivamente duplicados, até se encontrarum valor da função que exceda o anterior; chegado a este ponto, xn, 
+dá-se um passo em sentido contrário com metade da amplitude, de modo a partir o último intervalo a meio por um ponto xn +1; fica-se então 
+com 4 pontos equidistantes, respectivamente xn−2, xn−1, xn+1, xn; destes, identifica-se o que dá o valor mais baixo e despreza-se o mais 
+distante dele (se o mais baixo for xn−1, despreza-se xn; se for xn+1, despreza-se xn−2); sejam f1, f2, f3 os valores de f(x) nos pontos 
+retidos, equidistantes, x1, x2, x3.
+	Assim, o algoritmo selecionado é o algoritmo da regra áurea pois, este algoritmo faz uma diminuição do intervalo dependendo da
+amplitude do mesmo e da posição do mínimo e não de forma linear. Utilizou-se um intervalo inicial [0.5, 2.5] iterando enquanto que a amplitude
+do intervalo é superior a um dado valor (10**-4) (critério da precisão absoluta).
+	Resultado -> x = 1.234738738988618, f(1.234738738988618) = 16.50153578863566
+6.a) 0.4525 * 10^4
+6.b) 0.5832 * 10^0
+6.c) 0.0129%
+
+
+
+	
+	
+

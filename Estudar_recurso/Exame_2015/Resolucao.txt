@@ -1,0 +1,84 @@
+1. 9.46
+
+2.
+	1. Ao utilizarmos x e i inteiros, temos a vantagem de não nos termos de preocupar com
+erros de arredondamentos pois estes valores não possuem casas decimais, no entanto a ordem 
+de grandeza do passo terá de ser muito elevada para que o método possa ter grande precisão.
+	2. Ao utilizarmos x e h floats, já não temos a desvantagem de ter de ter de ter uma 
+ordem de grandeza muito elevada ao nível do passo, pois com valores mais pequenos conseguimos
+obter os valores com uma grande precisão. Porém, como estamos a utilizar valores com casas 
+decimais, iremos ter sempre a desvantagem da possibilidade de existência de erros devido a 
+arredondamentos.
+	3. Tal como na opção anterior, como estamos perante floats, não teremos de ter uma elevada
+ordem de grandeza a nível do passo de integração para que possamos ter uma boa precisão. Porém,
+a nivel de arredondamentos, vamos ter sempre alguns erros, e estes vão ter ainda piores que na
+alínea anterior, pois a cada iteração multiplicamos o valor de h por um inteiro, intensificando o erro
+a cada iteração.
+	4. Este é o melhor caso pois permite-nos ter um passo com uma pequena ordem de grandeza e preciso, e por outro lado, sem erros de arredondamentos
+associados pois o passo é sempre representável na linguagem da máquina.
+
+3.a)
+                [ 1  0.5   0.334   - 1  ]
+                [ 0  1     1        18  ]
+                [ 0  0     1       -30  ]
+3.b)
+	x1 = -15
+	x2 =  48
+	x3 = -30
+3.c)
+	error_1 = -0.3
+	error_2 =  2.4
+	error_3 = -3.0
+
+4.a)
+	a) X1, X2
+	b) Nenhum
+	c) X1, X2
+
+4.b)
+	0	1.10000
+	1	1.57691
+4.c) 0.47691
+
+5.
+
+	 0.12500	 0.12500
+	 0.06250	 0.06250
+	 0.03125	 0.03125
+	11.34629	11.25550
+	11.27778	11.25495
+	11.26063	11.25491
+	 3.99394	15.85798
+	-0.00572	-2.30991e-6
+6.
+	Para a resolução deste exercício, opatria pela utilização do método Levenberg-Marquardt.
+	Este método consiste numa combinação dos métodos do gradiente e da quadrática no mesmo passo, fazendo:
+	      	h = hquad + λ.hgrad
+em que hquad e hgrad são, respectivamente, os vectores de passo dos métodos do gradiente e da quádrica e λ é um
+parâmetro a determinar pela própria evolução do processo, segundo a seguinte lógica:
+	       • começa-se com um valor elevado de λ (em relação à norma de hquad) , isto é, começa-se virtualmente segundo o
+  	     	gradiente e continua-se decrementando o valor de λ enquanto os novos pontos calculados conduzirem a valores
+          	decrescentes da função objectivo; assim, o método aproxima-se progressivamente do da quádrica quando é bem
+		sucedido;
+	       • porém, cada vez que o novo ponto seja mal sucedido (isto é, corresponda a um incremento da
+		função objectivo), o ponto é ignorado, o valor de λ é incrementado e faz-se nova tentativa.
+
+	Deste modo, no decorrer de uma pesquisa típica, o valor de λ oscila várias vezes ao sabor das irregularidades da
+superfície até que, chegado às vizinhanças do mínimo, tende a decrescer indefinidamente; esta circunstância permite
+determinar o ponto de paragem do algoritmo.
+
+		Concebido inicialmente para resolver problemas de mínimos quadrados onde resulta particularmente
+económico pela facilidade, característica deste tipo particular de problema, no cálculo das derivadas e da
+quádrica osculadora, o método pode, ser estendido a casos mais gerais, embora à custa de
+trabalho de cálculo maior que no caso particularmente fácil dos mínimos quadrados.
+
+	Curiosamente, o método torna-se especialmente vantajoso nas situações difíceis como as de existência de depressões
+alongadas, porque aí a quádrica detecta muito facilmente o alongamento. Deste modo, o algoritmo, por ingénuo que
+pareça, é um dos mais rápidos e eficazes que se conhecem.
+	
+	Porém, são frequentes os casos em que condições físicas ou matemáticas nos forçam a reduzir a busca a valores 
+das variáveis que satisfazem determinadas condições. Como podemos ver, este gráfico possui duas concavidades, o que traz algumas dificuldades
+à utilização deste método, pois como método míope, isto é, puramente local, corre sempre o risco de se encaminhar para um mínimo local e dele 
+não poder sair, que é ainda agravada pelo facto evidente de não haver critério local capaz de distinguir um mínimo local de um global.
+	
+7.	2.1750

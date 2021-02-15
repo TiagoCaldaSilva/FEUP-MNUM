@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/user/Desktop/FEUP/2_Ano/1_Semestre/MNUM/TP5/GAUSS_JACOBI/main.cpp
+iostream
+-
+math.h
+-
+vector
+-
+

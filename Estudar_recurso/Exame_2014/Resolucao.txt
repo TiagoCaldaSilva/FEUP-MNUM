@@ -1,0 +1,113 @@
+1.a) 0.1
+1.b) 1
+1.c) 20, pois ao substituir os valores dados na equação, é com k = 20
+que a função se aproxima de 0 quando t = 1.6
+
+2.a) 3
+2.b)
+	1.70000 11.85185
+	2.45031  0.76769
+	2.50603
+2.c) 0
+
+3.a) 
+    [ 1.0  5.0        30.0                 2.5                   0.0          ]
+    [                                                                         ]
+    [ 0.0  1.0       6.16379             0.48276             - 0.17241        ]
+    [                                                                         ]
+    [ 0.0  0.0         1.0             - 0.95417             - 1.41034        ]
+    [                                                                         ]
+    [ 0.0  0.0         0.0                 1.0                 1.82038        ]
+
+3.b)
+
+                       [  0.97263  ]
+                       [ -3.06443  ]
+                       [  0.32662  ]
+                       [  1.82038  ]
+
+3.c)
+
+                 [ 0.12249 ]
+                 [ 0.56700 ]
+                 [-0.01530 ]
+                 [ 0.13439 ]
+
+4.
+Começemos por fazer uma breve análise à função em questão.
+Como o objetivo através do método de newton será encontrar as raízes da função, ou seja, quais os valores
+de x tal que x é igual à raiz de ordem m de R, iremos ter diferentes raízes para os diferentes valores de m e R.
+Deste modo:
+	. caso m seja par temos 3 alternativas:
+		- Se R > 0, teremos duas soluções o que leva a que se apresentarmos um guess um pouco distante da raiz
+			que procuramos, poderá divergir para a outra solução ou acabar por divergir completamente.
+		- Se R = 0, termos apenas um solução (x=0) o que significa que se tivermos um guess um pouco distante da raiz
+			em questão, o método poderá divergir completamente
+		- Se R < 0, não teremos nenhuma solução.
+	. caso m seja ímpar temos 2 alternativas:
+		- Teremos apenas uma solução o que leva a que se o guess dado foi distante da raiz, o método acaba por divergir por completo
+
+Assim, como a função em questão já se demonstra um pouco instável, teremos de ter cuidado com a equação que devemos escolher, devendo-nos guiar por aquela que
+é mais estável. Conlcuindo, como a expressão b) contém uma função descontínua e com grandes possibilidades de poder divergir, devemos escolher a opção a), opção
+que contém uma função contínua e mais estável do que a contida por b).
+
+5.
+
+	2.00000 4.00000 2.76393  3.23607 -2.99003 -2.51142 -5.01640 -4.88337 0
+	2.00000 3.23607 2.47214  2.76393 -2.99003 -4.88337 -4.54135 -5.01640 1
+	2.47214 3.23607 2.47214  2.76393 -4.54135 -4.88337 -4.54135 -5.01640 2
+
+	Amplitude = 0.47214
+
+6.
+	Para efetuarmos o cálculo numérico do valor de um integral definido, possuimos duas hipóteses:
+		- Regra dos trapézios (ordem = 2)
+		- Regra de simpsons (ordem = 4)
+	Estes métodos consistem em substituir, em cada intervalo, o arco da curva pela sua corda, calculando em seguida a área sob a
+poligonal assim definida. Assim, começando pelo método dos trapézios, temos que o algortimo deste metodo consiste em
+somar o valor da função nos pontos inicial e final do intervalo à soma do dobro do valor da função nos valores entre estes.
+Para obter os valores em que utilizamos o dobro, é necessário definir um 'h' que é o valor que separa dois pontos consecutivos 
+(passo de integração). Assim, por exemplo, se h fosse 0.1, iriamos somar o dobro da função em 0.1, com o dobro da função em 0.2, até 
+chegar a xf.
+
+	Um defeito óbvio da regra dos trapézios é o de cometer um erro sistemático em intervalos em que a segunda derivada da
+integranda mantém sinal constante. Para o evitar e para aumentar, na generalidade, a precisão da aproximação, foi
+criado um algoritmo novo, a regra de Simpson que, em vez de substituir a curva pelas cordas definidas por cada par de
+pontos consecutivos, a substitui pelas parábolas definidas por cada trio de pontos consecutivos. Deste modo, o
+algoritmo mais simplificado consiste em fazer exatamente o mesmo que se faz no método dos trapézios fazendo umas
+alterações na soma dos valores intermédios do intervalo. Em vez de se somar o dobro de todos os valores, definimos que
+somamos o quádruplo dos valores designados por ímpares com o dobro dos valores pares. Os elementos ímpares são os
+que são separados por um número ímpar de "h's" da posição inicial, enquanto que os elementos pares são separados por
+um número par de "h's". Por exemplo, a posição x0 + h, difere da posição inicial de apenas um h, logo é um elemento
+ímpar enquanto que o elemento x0 + 2*h difere da posição inicial de 2 h's sendo um elemento par.
+
+	A ordem destes dois métodos representa a forma como o erro vai variar dependendo do valor do passo a tomar (dependendo
+do h). Ambos os método possuem um método de controlo do erro semelhante, calculamos o valor final para h definindo o
+resultado como S, de seguida calculamos o valor final para h/2, definindo o resultado como S', e fazemos o mesmo para
+h /4, definindo o resultado como S''. Deste modo, podemos concluir que o passo tomado foi o correto (ou seja, que
+utilizamos o melhor valor de h, quando ao fazermos: (S' - S)/(S'' - S') obtemos aproximadamente o valor de 2^ordem do
+método (4 para o método dos trapézios e 16 para o método de simpson)
+
+	Assim podemos saber qual o erro absoluto esperado efetuando (S'' - S') / (2^(ordem do método) - 1) (com os valores de
+S'' e S' obtidos com o melhor passo a tomar, ou seja, quando no passo definido anteriormente obtemos o valor de
+2^ordem do método).
+
+7.a) 2
+7.b) 
+	[0, +00] -> Sim
+	[-0.2, 4] ->Sim
+	[1, 3.5] -> Não
+	[3.5, 4.5] -> Sim
+7.c)
+	Sim
+	Sim
+	Não
+7.d)
+	3.61617
+	3.70551
+
+
+
+
+
+

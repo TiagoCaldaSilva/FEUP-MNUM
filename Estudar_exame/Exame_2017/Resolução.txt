@@ -1,0 +1,36 @@
+1. Estamos perante uma função unidimensional(variável [x]), logo temos três métodos que podemos utilizar para minimizar
+a função f(x, a): método de Trisecção, método dos terços e método da áurea.
+Todas estas funções nos dão a possibilidade de descobrir qual o mínimo da função f(x, a) e na minha resposta vou utlizar o método
+da regra áurea.
+
+3.
+1- A função dada contém duas raízes, uma no intervalo [-5.5, -4.5], e outra em [1, 2]
+2- Para verificarmos qual a fórmula de recorrência que deve ser utilizada para cada raiz, temos de definir um guess, ou seja, um valor
+próximo da nossa raiz, que vai ser utilizado no estudo da função. Definindo guess1 = -5.2 e guess2 = 2, a fórmula de recorrência a usar
+é aquela cujo módulo da derivada no nosso guess seja inferior a 1.´
+g1(x) = exp(x)-5 | diff(g1, x) = exp(x)
+g2(x) = ln(5+x)  | diff(g2, x) = 1 / (x + 5)
+Deste modo, para guess1 = -5.2:
+diff(g1, x)(-5.2) =  0.0055165
+diff(g2, x)(-5.2) = -4.9999999
+Ou seja, apenas g1(x) serve
+Para guess2 = 2:
+diff(g1, x)(2) = 7.38905609
+diff(g2, x)(2) = 0.14285714
+Logo temos de usar g2(x)
+
+O outro método não intervalar a ser utilizado é o método de newton.
+Deste modo iremos utilizar os métodos para as duas raízes com condições iniciais , guess = -5.2 e guess = 2 nomeadamente,
+e condição de paragem | x(x+1) - x(n) | <= 10^-4.
+Assim obtivemos os seguintes resultados:
+Picard peano, GUESS = -5.2
+X x = -4.993216246929542 | counter = 3
+Newton, GUESS = -5.2
+X x = -4.993216188647903 | counter = 3
+Picard peano, GUESS = 2
+X x = 1.9368513181488938 | counter = 5
+Newton, GUESS = 2
+X x = 1.9368474072253945 | counter = 3
+Podendo concluir que para a primeira raiz, as funções acabam por ter a mesma complexidade porque têm o mesmo número de iterações e
+apresentam resultados bastante similares. Porém, quando nos referimos à segunda raiz podemos concluir que o método de newton é mais eficaz porque atinge
+um resultado bastante aproximado aquele que o máxima nos dá com menos interações do que o método picard-peano.

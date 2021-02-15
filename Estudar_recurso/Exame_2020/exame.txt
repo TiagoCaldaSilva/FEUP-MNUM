@@ -1,0 +1,22 @@
+-integração de uma eq diferencial
+-saber quando esta solução atinge um valor em especial (mas este problema não é usual nas eq diferenciais mas sim nas eq lineares)
+
+-método para resolver as eq diferenciais (euler, euler melhorado, rk2, rk4)
+-podemos discutir os métodos que podem ser aplicados
+-disso resulta uma tabela de pontos e com essa tabela de pontos teremos de encontrar a raiz da função.
+Deixamos de ter o problema clássico das eq diferenciais e passamos a ter o problema clássico das lineares.
+-Teriamos de ir identificar qual o intervalo que tem a raiz -> deviamos de integrar sucessivos pontos da função até encontrarmos pontos
+com sinais opostos
+-Após isso iriamos reduzir o intervalo, ou usar um guess dentro desse intervalo para encontrarmos a raiz (não temos a expressão analítica, só
+temos pontos), mas sabemos dois pontos que enquadram a raiz
+-temos a técnica da força bruta -> temos dois pontos que enquandram a raiz. A aproximação mais simples é uma linha quebrada que une cada um dos
+pontos. Podemos usar essa ideia da linha e fazermos um ainterpolação linear entre esses dois pontos. desse modo é fácil calcular o ponto da raiz
+-o erro da raiz vai ser medido em x e então, precisamos que os pontos da função sejam poucos espaçados para o erro ser baixo. Essa é uma solução de força
+bruta, podemos ter soluções mais especificadas.
+-em vez de usarmos os dois pontos podemos usar um ponto como guess e trabalhar de novo com esse ponto, pois conseguimos usar o newton (temos tudo para usar o newton)
+(valor da função no ponto e o valor da derivada da função no ponto (valor da equação diferencial) epodemos ter uma soluçao mais "sofisticada" do valor da raiz.
+
+-erro de trajetória, a trajetória depende em larga medida do passo que estaos a fazer o erro de trajetória é um erro do valor da função, um erro vertical
+-melhor método e passo mais pequeno (um passo muito pequeno induz erros de arredondamentos)
+-erro de trajetória causa um erro no zero, como controlar em x? pelo espaçamento entre os dois pontos que limitam a raiz(o valor positivo e o valor negativo)
+-o problema é que a posição destes dois pontos depende de como a trajetória lá chegou

@@ -1,0 +1,47 @@
+1.a) O peso total é 13957.31097 kg
+1.b) Pela análise dos dados podemos concluir que quanto maior o intervalo entre as medições maior o erro.
+Este erro pode ser atingido após termos uma garantia que os valores que estamos a utilizar uns valores corretos.
+Esta garantia pode ser dada através do critério do quociente de convergência - este  critério implica que façamos 3 estudos do 
+problema, 1 deles usando um passo de integração que vamos chamar de h (identificando este estudo como s), outro dos estudos vai usar h/2 
+(identificando como s') e o terceiro vai usar h/4 (identificando como h'').
+Deste modo, podemos calcular o quociente de convergência através do cálculo de (s' - s)/(s'' - s') e podemos provar a validade dos nossos valores
+se este valor for aproximadamente 2^(ordem do método). Como neste caso estamos a utilziar o método de simpsons, método de quarta ordem, para podermos
+identificar os erros teriamos de obter um quociente de convergência de aproximadamente 16.
+Pela análise dos dados podemos concluir que este valor é alcançado e finalmente podemos calcular o erro absoluto. Este arro vai ser dado por (s'' - s')/x, 
+sendo este x o valor de (2^ordem do método) - 1 (neste caso 15).
+Assim, fizemos duas análises aos valores dados:
+	. Primeiro usamos um valor inicial de h = 8 para o passo de integração (usando posteriormente h = 4 e h = 2 para os restantes estudo) e obetivemos o valor:
+		.-2.2717684055733116
+	. Posteriormente vamos usal o valor inicial de h = 4 para o passo de integração (usando de seguida os valores h = 2 e h = 1) e obtivemnto um valor significativamente
+menor:
+		.-0.14198539985785222
+(ambos as tentivas obtiveram um valor de qc de aproximadamente 16)
+E, assim, podemos concluir que quanto menor for o intervalo entre as medições, menor o erro que podemos obter os nossos cálculos. Porém, como teremos um intervalo menor entre
+as medições iremos ter mais iterações o que não torna o método tão eficiente.
+2. --------------------
+3.
+	x1 =-0.78021
+	x2 = 1.39216
+	x3 = 2.16284
+	x4 = 0.10362
+4.
+a)
+	I   = 0.14671 | h   = 0.08
+	I'  = 0.14854 | h'  = 0.04
+	I'' = 0.14953 | h'' = 0.02
+	qc  = 1.85140 | erro absoluto estimado = 0.00099
+b)
+	I   = 0.52572 | h'  = 0.16
+	I'  = 0.52664 | h'  = 0.08
+	I'' = 0.52672 | h'' = 0.04
+	qc = 12.73754 | erro absoluto estimado = 4.81409e-06
+5.
+Euler
+	0.00 0.00000
+	0.25 0.25000
+	0.50 0.53125
+RK4:
+	0.00 0.00000
+	0.25 0.26874
+	0.50 0.59220
+

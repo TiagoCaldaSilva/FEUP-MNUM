@@ -1,0 +1,21 @@
+1. [-1.2, 2.6]
+2.a)Se a raiz estiver bem isolada, o método da bissecção converge sempre.
+2.b)O método da bissecção obriga o conhecimento do sinal da função em 3 pontos para a construção de uma nova iteração.
+2.c)O método de picard-peano não exige o conhecimento do valor da função para o cálculo do novo valor de x.
+2.d)É possível conhecer à priori o número de iterações necessário para atingir uma precisão pré determinada no método da bissecção.
+3.a)
+                    [ -6.8316 ]
+                    [-39.8771 ]
+                    [ 32.1788 ]
+3.b)
+	            [-1.8523 ]
+                    [-9.6629 ]
+                    [ 8.4272 ]
+A incógnita mais sensível a erros é aquela que tem um valor absoluto de erro maior -> x2
+4.a) (Apanha sempre o ponto médio) -> Método da bissecção
+4.b) Não existe outro método intervalar -> Método da corda
+5. 0	1.7	1.2802
+6.
+	1.5000 1.3000
+	3.8828 4.0725
+	6.3185 1.9037

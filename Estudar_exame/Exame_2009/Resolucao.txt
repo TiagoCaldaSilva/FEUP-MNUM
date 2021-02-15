@@ -1,0 +1,16 @@
+2. Sabendo que R >= 0 quando (m % 2 == 0), vamos ter duas soluções (uma positiva e outra negativa). Se o guess for afastado da raiz vai
+convergir para outra solução. Se for ainda mais afastado vai acabar por divergir.
+No caso de ( m % 2 != 0 ), sendo R quer >0, quer <0, apenas vamos ter uma solução e o que acontece é que basta o guess seja um pouco
+afastado da raiz que o método vai divergir.
+Se R < 0 quando ( m % 2 == 0 ), não temos nenhuma solução. 
+Como a expressão b) e a sua derivada não são continuas, enquanto a expressão a) e a sua derivada o são, optaria pela expressão a) pois o 
+risco desta divergir é menor. De salientar também que a expressão b) é uma função muito plana, pelo que a maioria dos casos divergia.
+
+
+3. Feito
+
+6.1) O valor que se soma é sempre o dobro logo é a regra dos trapézios.
+6.2) é fazer o dobro dos valores que lá estão e no final fazer a soma. No fim multiplicar por 0.1 ( h / 2 )
+6.3) (5.27 - 5.18) / (5.235 - 5.27) = - 2.571428571428622
+6.4) Não, devia de ser aproximadamente 4
+6.5)  -0.01166666666666642

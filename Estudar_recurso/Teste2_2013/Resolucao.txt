@@ -1,0 +1,15 @@
+1.
+	0.27778 -0.16667 -0.22222  0.00000
+	0.13580 -0.11111 -0.08642 -0.20988
+
+O método converge porque em cada linha da matriz, o elemento da diagonal principal é superior à soma dos restantes.
+2.
+	1.000 1.00000
+	1.125 1.20538
+	1.250 1.35885
+	1.375 1.45910
+	1.500 1.51222
+	qc = 20.47896
+h que devia de ser tomado = 0.0625
+3. Já feita
+4. Já feita

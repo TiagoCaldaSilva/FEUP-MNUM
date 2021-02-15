@@ -1,0 +1,63 @@
+1.
+	Pela análise da função podemos concluir que estamos perante uma função que apenas depende de uma variável.
+	Deste modo, a otimização que teremos de aplicar será uma otimização unidimensional. Para isso temos à nossa opção
+3 métodos intervalares: Método dos terços, Regra áurea e o Método da interpolação quadrática. Para a utilização destes métodos é necessário
+sabermos que um intervalo aberto em ambos os extremos que contém um mínimo, tem no seu interior um ponto de ordenada inferior à dos extremos. 
+Chamemos a esses três pontos a,b, c. O raciocínio reciproco, o conhecimento de três pontos de uma função em que o ponto interior tem ordenada 
+inferior garante-nos a existência de pelo menos um mínimo no intervalo. Se adicionalmente a função for convexa nesse intervalo, então o mínimo é único.
+	Podemos seguir à utilização da regra áurea. Esta regra começa com um intervalo [x1, x2] em que se sabe estar o mínimo, e deste modo, escolhe-se:
+		x3, tal que x3 = x1 + A*(x2-x1)
+		x4, tal que x4 = x1 + B*(x2-x1)
+	com B = (sqrt(5)-1)/2 e A = B^2.
+	Assim:
+		• se for f(x3) < f(x4) o mínimo está em [x1, x4] e o próximo passo implica x2 ← x4;
+		• se for f(x3) > f(x4) o mínimo está em x3, x2 e o próximo passo implica x1 ← x3;
+	e repetimos estes passos enquanto o critério escolhido o permitir. No final, iremos ter no intervalo formado por [x1, x2] o mínimo.
+	
+	Para a resolução iremos adotar o intervalo [0, 3], com a função (x-5)^2 + x^4 e utilizar o critério da precisão absoluto com o valor 10^-4.
+	Concluindo, obtemos o resultado 1.23482 em 22 iterações. 
+2.
+	Trap
+	h = 0.125 | h' = 0.0625 | h'' = 0.03125
+	I = 11.34629 | I' = 11.27778 | I'' = 11.26063
+	qc = 3.99394 | erro absoluto estimado = -0.00572
+	simpson
+	h = 0.125 | h' = 0.0625 | h'' = 0.03125
+	I = 11.25550 | I' = 11.25495 | I'' = 11.25491
+	qc = 15.85798 | erro absoluto estimado = -2.05236e-07
+3.
+	1. As raízes encontram-se nos intervalos [-5.5, -4.5] e [1.5, 2.5].
+	2. A formúla de recorrência 1) converge para a raiz negativa que se encontra no intervalo [-5.5, -4.5]. Já a outra fómula (2) converge para a raiz positiva
+que se encontra no intervalo [1.5, 2.5]. Podemos concluir isto, pois podemos concluir que todos o módulo do valor das derivadas desses funções nesses intervalos são
+menores que 1, passando pelo critério de convergência do método picard-peano.
+	Outro método que podemos escolher para calcular a maior das raízes é o método de newton. Este método é mais eficiente que o método picard-peano (como podemos ver pela
+análise dos dados) e possui como fórmula de recorrência: xn+1 = xn - f(xn)/f'(xn). Iremos adotar o critério de precisão absoluta (com o valor de 10^-4) para podermos comparar 
+ambos os métodos e obtemos os seguintes resultados:
+	Newton:
+		Guess -> 1.8
+		Raiz  -> 1.93685
+		Iterações necessárias -> 3
+	Picard-peano:
+		Guess -> 1.8
+		Raiz -> 1.93684
+		Iterações necessárias -> 5
+	
+	Concluindo, ambos os métodos convergem para o mesmo valor (1.9368), porém o método de newton é mais eficiente pois consegue atingir o mesmo valor com menos iterações.
+
+4.
+	euler
+	0.00000 2.50000 25.00000
+	0.25000 1.87605 43.09357
+	0.50000 1.40778 54.25499
+	
+	rk4
+	0 25 0.00000  2.50000
+	0.25 1.94782 39.94349
+	0.50 1.51757 49.70136
+	
+	h' = 0.125 | h'' = 0.0625
+	T' = 51.77067 | T'' = 50.69205
+	qc = 2.30325
+	error = -1.07861
+
+5.	4.51017

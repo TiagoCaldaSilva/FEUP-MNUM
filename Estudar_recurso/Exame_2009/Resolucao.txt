@@ -1,0 +1,106 @@
+1. 7.10525
+
+2. Começemos por analisar a equação que define o valor de x em função de R e m.
+Podemos começar por assegurar que temos duas possibilidades:
+	.m é par
+	.m é ímpar
+
+No caso de m ser par, podemos concluir que se R < 0, não existe nenhuma solução para a equação.
+No caso de m ser par, podemos concluir que se R > 0, teremos duas possíveis soluções (simétricas)
+para a equação.
+E por fim, no caso de m ser par, podemos concluir que se R = 0, teremos uma única solução para a 
+equação ( x = 0 )
+
+Por outro lado, se tivermos que m é ímpar:
+	No caso de R = 0, também apenas teremos uma solução ( x = 0 )
+	No caso de R > 0, apenas teremos uma única solução
+	No caso de R < 0, teremos também uma única solução
+
+Deste modo, podemos concluir que estamos perante uma eq que poderá divergir bastante no momento de
+encontrar o verdadeiro valor de x:
+	No caso de m ser par, com R > 0, se o nosso guess inicial for distante do valor que queremos
+encontrar, pelo método de newton, podemos divergir para a outra solução ou até divergir completamente.
+	No caso de m ser par ou ímpar e com R = 0, no caso do nosso guess ser um valor distante da orgigem,
+através do método de newton, a função vai divergir.
+	No caso de m ser ímpar, tanto com R > 0 como com R < 0, vai acontecer que se o nosso guess inicial for
+um valor bastante distante da soluão, pelo método de newton, vai divergir.
+
+Assim, visto que a própria função é uma função que pode divergir com facilidade, devemos de escolher a equação que
+menos diverge, naquelas que nos são dadas.
+
+Deste modo, como a opção b) é uma função não contínua, e que tem a possibilidade de divergir, a melhor opção vai ser a opção a),
+uma função que é um polinómio e que portanto é uma função contínua.
+
+3. 
+a)
+    [ 1.0  5.0        30.0                 2.5                   0.0          ]
+    [                                                                         ]
+    [ 0.0  1.0      _6.16379_            _0.48276_          _- 0.17241_       ]
+    [                                                                         ]
+    [ 0.0  0.0         1.0             _- 0.95417_          _- 1.41034_       ]
+    [                                                                         ]
+    [ 0.0  0.0         0.0                 1.0               _ 1.82038_       ]
+
+b)
+                  [x1   0.97263  ]
+                  [x2   -3.06443 ]
+                  [x3   0.32662  ]
+                  [x4   1.82038  ]
+
+c)
+                 [E1   0.20415   ]
+                 [E2   0.94500   ]
+                 [E3  -0.02550   ]
+                 [E4   0.22398   ]
+
+4.
+	2.00000 4.00000	2.76393 3.23607 -2.99003 -2.51142 -5.01640 -4.88337 0
+	2.00000 3.23607 2.47214 2.76393 -2.99003 -4.88337 -4.54135 -5.01640 1
+	2.47214 3.23607 2.76393 2.94427 -4.54135 -4.88337 -5.01640 -5.09902 2
+
+Amplitude -> 0.47214
+
+5.
+1.000000 1.000000 
+1.500000 1.767816
+2a
+1.000000 1.000000
+1.250000 1.425139
+1.500000 1.768150
+3a
+1.000000 1.000000
+1.125000 1.217710
+1.250000 1.425152
+1.375000 1.611392
+1.500000 1.768184
+
+QC = 9.836857
+
+6.
+a) Regra dos trapézios
+b) Dobrar os valores, e no último colocar a soma
+c) - 2.57143
+d) Não
+e)- 0.01167
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

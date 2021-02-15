@@ -1,0 +1,22 @@
+1. 10.65600
+2.a)
+0.20833 -0.16493 -0.09621 -0.14121
+0.18335 -0.17951 -0.12476 -0.13978
+2.b) O método converge porque em cada linha da matriz A, o módulo do elemento da diagonal principal é maior do que a soma dos restantes elementos da linha.
+3.
+ 		[ -4.37161  ]
+                [ -8.93251  ]
+                [ 28.84007  ]
+
+		[  1.95975  ]
+                [  3.37662  ]
+                [-11.88426  ]
+Incógnita mais sensível a erros é x3.
+4.
+	h = 0.08 | h' = 0.04 | h'' = 0.02
+	I   = 0.14671
+	I'  = 0.14854
+	I'' = 0.14953
+	qc  = 1.85140
+	erro= 0.00099
+5.-----

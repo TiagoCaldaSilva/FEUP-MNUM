@@ -1,0 +1,3 @@
+C:/Users/user/Desktop/FEUP/2_Ano/1_Semestre/MNUM/TP5/ELIMINAÇÃO_GAUSS/out/build/x64-Debug (default)/CMakeFiles/TP5.dir
+C:/Users/user/Desktop/FEUP/2_Ano/1_Semestre/MNUM/TP5/ELIMINAÇÃO_GAUSS/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
+C:/Users/user/Desktop/FEUP/2_Ano/1_Semestre/MNUM/TP5/ELIMINAÇÃO_GAUSS/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir

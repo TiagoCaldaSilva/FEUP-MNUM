@@ -1,0 +1,5 @@
+1. a) X1, X2 b) X1, X2 c) X1, X2 ???
+3. c) Não deveria de ser 0.0325?
+4.a) *???* (aquela que tiver os maiores valores na diagonal principal)
+4.b) III
+6) feito

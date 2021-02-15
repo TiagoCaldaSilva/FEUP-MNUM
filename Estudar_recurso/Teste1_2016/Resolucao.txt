@@ -1,0 +1,35 @@
+1.a) Enquanto que o método da bissecção é um método intervalar e que portanto implica encontrarmos um intervalo de valores
+para podermos iterar sobre estes, para o método picard-peano (método não intervalar) apenas temos de encontrar um único 
+valor para podermos começar a utilizar o método (guess) que tem de ultrapassar a nossa regra de recorrência:
+	. o módulo da derivada da regra de recorrência no ponto guess tem de ser inferior a 1.
+Neste caso a regra de reccorência seria:
+	Bx -  1 = 0 <=> x = 1/B, tal que B != 0 e B != 1
+Assim concluimos que o segundo método vai ser melhor porque temos uma regra de recorrência constante o que nos leva a executar
+apenas uma iteração.
+
+1.b) 1.55039
+
+2.a)Devemos de confiar mais na solução com pivotagem, pois a pivotagem é utilizada para evitar a ocorrência de erros. Assim, se
+num dos sistemas utilizamos uma técnica que nos permite diminuir a probabilidade de ocorrência de erros, podemos acreditar que esses
+valores estão mais certos do que quando não utilizamos técnica nenhuma.
+2.b)Os valores são diferentes, pois, como já dito, num dos sistemas foi utilizada uma técnica para evitar a ocorrência de erros, pelo que
+se os valores fossem iguais podiamos dizer que a influência que a técnica teve na solução do sistema foi nula.
+2.c)Como o método de Eliminação de Gauss é um método que se baseia em operações matemáticas sobres os dados do sistema (coeficientes das incógnitas
+e termos independentes), se possuirmos erros nesses valores, a cada operação estes vão se intensificar através das somas, multiplicações, subtrações
+e divisões dado que se um dos valores num cálculo possui um erro, este erro mantém-se ou intensifica-se no resultado desse cálculo, occorrendo esse
+processo de iteração para iteração múltiplas vezes (dependendo da quantidade de cálculos que efetuamos por iteração).
+3.a)2
+3.b)(1, -2), optaria por este ponto porque é um ponto que não se encontra entre as duas soluções possiveis do sistema e deste modo, teriamos a certeza
+que o método que utilizarmos irá convergir para apenas uma delas (neste caso para a solução com ambas as coordenadas positivas).
+3.c) x= 0.2416198487095663 | y = 0.9416198487095663 | it = 8
+PP1:
+x = -1.2416198487095662 | y = -0.5416198487095663 | it = 83
+PP2:
+x = 0.24161984870956632 | y = 0.9416198487095663 | it = 97
+3.d) Notando que o guess inicial não foi o melhor (pois é um valor que se encontra entre as duas soluções (o que vai permitir que o método possa divergir tanto para uma
+quanto para outra), é de esperar que o método não vá ser tão eficiente como se tivessemos escolhido um melhor guess inicial).
+Deste modo, após uma análise dos dados, podemos concluir que a primeira formulação irá convergir para a solução negativa (aquela que possui ambas as coordenadas negativas) e 
+a segunda formulação irá convergir para a solução positiva (aquela que possui ambas as coordenadas positivas).
+Porém, em comparação com o método de newton, este sistema não se demonstrou mais eficiente pois utilizando o mesmo critério de paragem (critério da precisão absoluta com valor
+10^-3) o método de newton encontrou o valor que era esperado em apenas 8 iterações enquanto que o método de picard-peano encontrou o mesmo valor em 97 iterações.
+É de notar que ambos os métodos foram bastante precisos, e podemos concluir que o mais eficiente é o método de newton.

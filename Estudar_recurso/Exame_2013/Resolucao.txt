@@ -1,0 +1,48 @@
+1.
+Euler
+	0ª -> 0.00 0.00000
+	1ª -> 0.25 0.25000
+	2ª -> 0.50 0.53125
+Rk4 -> verificar
+	0ª -> 0.00 0.00000
+	1ª -> 0.25 0.26874
+	2ª -> 0.50 0.59220
+
+2.
+	Para evitar a existência de erros no método de Gauss, têm, ao longo dos tempos, sido imaginados
+numerosos esquemas que, no fundo, se reduzem a combinações ou variantes de algumas técnicas. No entanto nenhum desses 
+esquemas é perfeito. Na maior parte dos casos trata-se, fundamentalmente de evitar o aparecimento de valores muito altos 
+como multiplicadores dos erros e de valores muito baixos como divisores das equações.
+
+	Deste modo, temos o exemplo da pivotagem parcial. No sentido mais geral, esta técnica consiste em, na eliminação de cada 
+coluna, escolher, não o primeiro coeficiente não-nulo, mas o maior (em valor absoluto) coeficiente dessa coluna e em, naturalmente,
+usar a equação correspondente para proceder à eliminação. O efeito da pivotagem parcial é apenas o de uma reordenação das equações,
+embora essa reordenação não precise de ser fisicamente implementada.
+	
+	Assim, dado que a pivotagem é uma técnica utilizada para evitar a existência de erros, é normal que os resultados não vão 
+ser iguais, pois o sistema que foi resolvido sem pivotagem irá apresentar mais erros do que aquele que foi resolvido com a pivotagem
+parcial. Assim, a solução correta será, na minha opinião, a solução do sistema com pivotagem, pois contém menos erros do que o outro.
+
+	Sabendo ainda que o Método de Eliminação de Gauss consiste em vários calculos numéricos entre as várias linhas
+e colunas do sistema, se tivermos algum erro nos dados (coeficientes das incógnitas e termos independentes), a cada iteração vamos estar a
+aumentar esses erros devido às várias operações numéricas efetuadas entre os vários valores do sistema. E, deste modo, podemos concluir que 
+neste tipo de métodos baseados em operações matemáticas sobre os dados do sistema, por muito mínimo que possa ser inicialmente o erro 
+nos dados, à medida que se vai resolvendo o sistema este vai acabar por aumentar a cada iteração podendo chegar a valores muito maiores devido
+às somas, multiplacações, divisões (etc) que podem ocorrer para o resolver.
+
+3.
+	2.0  2.0  18.00 2 13 0.5
+	1.0 -4.5 -29.75
+
+4.
+	0.12500 - 3.33739
+	0.06250 - 3.33737
+	0.03125 - 3.33736
+
+	qc = 15.94745
+	erro relativo estimado = -2.67926e-08
+	analiticamente = 3.33736
+	erro relativo cometido = - 6.83782e-6
+
+5. 3.70026
+	

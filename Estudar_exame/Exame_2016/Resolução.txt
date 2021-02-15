@@ -1,0 +1,47 @@
+2.
+	1.Partindo de x e i como valores inteiros, temos a vantagem de não haver a possibilidade de exitirem erros de arredondamentos (visto
+que estamos a utilizar números sem casas decimais), no entanto a ordem de grandeza do passo terá de ser muito elevada para que o método 
+possa ter grande precisão.
+	2.Com x e h como floats temos a vantagem de a contrário do ponto em cima, não ser necessário ter uma ordem de grandeza do passo 
+muito elevada para ter uma boa precisão no método, porém ainda não é o ideal. Por outro lado, como já se tratam de números com casas decimais,
+os nossos calculos ficam sujeitos a erros de arredondamentos.
+	3.Tal como no ponto anterior, como estamos a tratar de floats, não é necessário uma grande ordem de grandeza no passo para que o 
+método possúa uma boa precisão. Porém, por estarmos perante números com casas decimais, ficamos sujeitos a uma maior probabilidade de
+existirem erros devido à representação da máquina (erros por arredondamentos). Por outro lado, como ainda estamos a multiplicar h por um inteiro 
+que aumenta com as iterações, a probabilidade de encontrarmos erros, itensifica-se, intensificando-se também os erros que possam aparece, ou
+seja, os erros irão ser mais significativos.
+	4. Este é o melhor caso pois permite-nos ter um passo com uma pequena ordem de grandeza e preciso, e por outro lado, sem erros de arredondamentos
+associados pois o passo é sempre representável na linguagem da máquina.
+
+3.	O método numérico mais vantajoso a utilizar seria o método Lavenberg-Marquerdt, pois este método é uma mistura dos métodos do gradiente
+e da quadrática.
+	Deste modo, este método, torna-se vantajoso para em situações difíceis como em gráficos como este, de depresões alongadas, pois,
+o método da quadrática deteta facilmente o alongamento. Deste modo, o algoritmo escolhido é aquele que é mais rápido e mais eficaz que se
+conhece.
+	Concebido inicialmente para resolver problemas de mínimos quadrados onde resulta particularmente
+económico pela facilidade, característica deste tipo particular de problema, no cálculo das derivadas e da
+quádrica osculadora, o método pode, ser estendido a casos mais gerais, embora à custa de
+trabalho de cálculo maior que no caso particularmente fácil dos mínimos quadrados.
+	Assim, através deste método:
+• começa-se com um valor elevado de λ (em relação à norma de hquad) , isto é, começa-se virtualmente segundo o gradiente e continua-se 
+decrementando o valor de λ enquanto os novos pontos
+calculados conduzirem a valores decrescentes da função objectivo; assim, o método aproxima-se
+progressivamente do da quádrica quando é bem sucedido;
+• porém, cada vez que o novo ponto seja mal sucedido (isto é, corresponda a um incremento da
+função objectivo), o ponto é ignorado, o valor de λ é incrementado e faz-se nova tentativa. 
+	Deste modo, no decorrer de uma pesquisa típica, o valor de λ oscila várias vezes ao sabor das irregularidades da superfície 
+até que, chegado às vizinhanças do mínimo, tende a decrescer indefinidamente; esta circunstância permite determinar o ponto de paragem 
+do algoritmo.
+	Posto isto, um dos problemas deste método é que, frequentemente, existem casos onde as condições físicas ou matemáticas nos forçam
+a reduzir a busca a valores das variáveis que satisfazem determinadas condições.
+	Pela análise do gráfico podemos concluir que esta função, não se trata de uma função convexa. Deste modo, como método de Lavenberg-Marquerdt
+não se econtra capaz de distinguir mínimos locais, de mínimos absolutos, a utilização deste método neste problema pode levar a que a função encontre
+este mínimo local e fique lá "presa", não possuindo a capacidade de ultrapassar o mínimo local e prosseguir em direção ao mínimo absoluto.
+	O problema central específico da optimização não convexa pode, portanto, definido como o de encontrar
+um método de geração de alternativas que permita o atingimento do óptimo absoluto, sem encalhe em
+óptimos locais. Como se sabe, o único método actualmente disponível consiste em uma combinação de
+uma técnica de Monte Carlo do tipo aceitação-rejeição(para geração de sucessivos pontos de partida, ou
+guesses iniciais, dentro do praticável) combinado com uma técnica do tipo anterior(para melhoramento
+do guess inicial).
+4. ??????????????????
+	

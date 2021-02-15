@@ -1,0 +1,12 @@
+2. A solução que considero correta é a solução com pivotagem, pois a pivotagem é utilizada para minimizar os erros e deste modo podemos
+supor que a solução correta é aquela que possui uns erros menores.  O efeito da pivotagem parcial é apenas o de uma reordenação das 
+equações, embora essa reordenação não precise ser fisicamente implementada.
+Deste modo, não se obtiveram resultados iguais porque o método utilizado com a pivotagem minimiza os erros pelo que os resultados vão dar,
+naturalmente diferentes (um com erro maior do que o outro).
+Assim, como o processo da eliminação de gauss é com base em cálculos matemáticos, se um valor apresentar um error (por menos significativo
+que este seja), o resultado do cálculo efetuado já não irá ser totalmente correto. E deste modo, o erro vai se alastrando afetando por fim
+a solução final do sistema.
+3. confirmar valor de Z(Xn) na iteração 1
+4.b) 3.337364510680308
+4.c) -6.837822827951934e-6 (x exato - x aproximado) / x exato
+5. verificar
