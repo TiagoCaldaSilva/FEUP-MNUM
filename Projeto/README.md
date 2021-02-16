@@ -1,6 +1,6 @@
 # Pharmacokinetics - Valaciclovir :pill:
 ## Infos :information_source:
-Programming language used: <em> python, máxima</em>
+Programming language used: <em> python, maxima</em>
 
 
 ## About the project :bulb:
