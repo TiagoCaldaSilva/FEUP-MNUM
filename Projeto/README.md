@@ -1,4 +1,4 @@
-# Pharmacokinetics - Valaciclovir
+# Pharmacokinetics - Valaciclovir :pill:
 ## Infos :information_source:
 Programming language used: <em> python, máxima</em>
 
